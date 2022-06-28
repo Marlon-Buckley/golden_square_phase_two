@@ -13,7 +13,10 @@ class MusicTracker
     fail "You didn't provide a song/artist!" if artist_song == nil
     @music_list += [artist_song]
   end
-
+  
+  def song_list
+    return @music_list
+  end
 
 
 end
