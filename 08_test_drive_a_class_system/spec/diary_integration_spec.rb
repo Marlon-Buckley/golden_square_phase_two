@@ -7,7 +7,7 @@ RSpec.describe "intergration" do
       diary = Diary.new
       diary_entry = DiaryEntry.new("Another title", "Some other contents")
       diary_entry = DiaryEntry.new("A title", "Some contents")
-      diary.add(diary_entry)
+      diary.add(diary_entry)§
       expect(diary.all).to eq [diary_entry]
     end
   end
