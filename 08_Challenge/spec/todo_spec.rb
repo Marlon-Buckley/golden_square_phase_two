@@ -1,20 +1,22 @@
-# File: lib/todo.rb
-class Todo
-  def initialize(task) # task is a string
-    @task = task
+# Check that task method returns given task?
+require 'todo'
+
+
+RSpec.describe "#task method" do
+  it "returns the task and its initial status of 'incomplete' " do
+    testTodo = Todo.new("Do the dishes")
+    expect(testTodo.task).to eq ["Do the dishes", "incomplete"] 
   end
 
-  def task
-    # Returns the task as a string
+  it "marks a given test as done" do
+    testTodo = Todo.new("Do the dishes")
+    testTodo.mark_done!
+    expect(testTodo.task).to eq ["Do the dishes", "complete"]
   end
 
-  def mark_done!
-    # Marks the todo as done
-    # Returns nothing
-  end
-
-  def done?
-    # Returns true if the task is done
-    # Otherwise, false
-  end
 end
+# done? 
+  # Returns true if the task is done
+  # Otherwise, false
+
+
