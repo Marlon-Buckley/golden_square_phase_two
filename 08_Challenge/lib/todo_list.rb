@@ -1,6 +1,12 @@
 class TodoList
-  def add(todo) # todo is an instance of Todo
-    # Returns nothing
+
+  def initialize
+    @main_list = []
+  end
+
+
+  def add(todo)
+    @main_list << todo
   end
 
   def incomplete
