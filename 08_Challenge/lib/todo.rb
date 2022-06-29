@@ -14,7 +14,10 @@ class Todo
   end
 
   def done?
-    # Returns true if the task is done
-    # Otherwise, false
+    if @task[1] == "complete"
+      return true
+    else
+      return false
+    end
   end
 end
