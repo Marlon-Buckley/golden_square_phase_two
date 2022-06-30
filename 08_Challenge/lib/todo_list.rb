@@ -3,7 +3,10 @@ class TodoList
   def initialize
     @main_list = []
   end
-
+  
+  def returns_list
+    return @main_list
+  end
 
   def add(todo)
     @main_list << todo
@@ -12,7 +15,6 @@ class TodoList
   def incomplete
     incomplete_tasks = []
     @main_list.each do | todo | 
-      binding.irb
       if todo.status == "incomplete" 
         incomplete_tasks << [todo]
       end

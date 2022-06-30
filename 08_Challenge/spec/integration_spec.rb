@@ -6,14 +6,16 @@ RSpec.describe TodoList do
   context "by default" do
     it "#add - adds todo to main list of tasks" do
       mainTest = TodoList.new
-      mainTest.add(Todo.new("Do the cleaning").task)
-      result = mainTest.add(Todo.new("Do the dishes").task)
-      expect(result).to eq [["Do the cleaning", "incomplete"], ["Do the dishes", "incomplete"]]
+      task1 = (Todo.new("Do the cleaning"))
+      task2 = (Todo.new("Do the dishes"))
+      mainTest.add(task1)
+      mainTest.add(task2)
+      expect(mainTest.returns_list).to eq [["Do the cleaning", "incomplete"], ["Do the dishes", "incomplete"]]
     end
   end
 
   context "#incomplete" do
-    it "returns all incomplete tasks" do
+    xit "returns all incomplete tasks" do
       mainTest = TodoList.new
       task3 = (Todo.new("cut the grass")) 
     #is this correct, should we add on one line then mark done on a seperate line
@@ -30,7 +32,7 @@ RSpec.describe TodoList do
 
 
   context "#complete" do
-    it "returns all complete tasks" do
+    xit "returns all complete tasks" do
       mainTest = TodoList.new
       
       task1 = (Todo.new("Do the cleaning"))  
