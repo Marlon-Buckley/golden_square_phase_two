@@ -12,6 +12,16 @@ class TodoList
     @main_list << todo
   end
 
+  def return_status(todo_name)
+    statuses = ""
+    @main_list.each do | todo |
+      if todo.name == todo_name
+        statuses = todo.status
+      end
+    end
+    return statuses
+  end
+
   def incomplete
     incomplete_tasks = []
     @main_list.each do | todo | 
@@ -23,9 +33,15 @@ class TodoList
   end
 
   def complete
-    complete_tasks = ["hello"]
-    return complete_tasks                  # Returns all complete todos
+    completed_tasks = []
+    @main_list.each do | todo |
+      if todo.status == "complete" 
+        completed_tasks << [todo]
+      end
+    end
+    return completed_tasks                  # Returns all complete todos
   end
+
 
   def give_up!
     # Marks all todos as complete
