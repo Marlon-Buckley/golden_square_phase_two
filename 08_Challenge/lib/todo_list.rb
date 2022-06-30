@@ -11,21 +11,17 @@ class TodoList
 
   def incomplete
     incomplete_tasks = []
-    @main_list.each do | task, status | 
-      if status == "incomplete" 
-        incomplete_tasks << [task, status]
+    @main_list.each do | todo | 
+      binding.irb
+      if todo.status == "incomplete" 
+        incomplete_tasks << [todo]
       end
     end
     return incomplete_tasks
   end
 
   def complete
-    complete_tasks = []
-    @main_list.each do | task, status | 
-      if status == "complete" 
-        complete_tasks << [task, status]
-      end
-    end
+    complete_tasks = ["hello"]
     return complete_tasks                  # Returns all complete todos
   end
 

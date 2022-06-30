@@ -12,32 +12,50 @@ RSpec.describe TodoList do
     end
   end
 
-
   context "#incomplete" do
     it "returns all incomplete tasks" do
       mainTest = TodoList.new
-      mainTest.add(Todo.new("Do the cleaning").task)  
-      mainTest.add(Todo.new("paint the fence").task)
-      mainTest.add(Todo.new("cut the grass").task) 
-      #is this correct, should we add on one line then mark done on a seperate line
-      mainTest.add(Todo.new("Do the dishes").mark_done!)
-      expect(mainTest.incomplete).to eq [["Do the cleaning", "incomplete"], ["paint the fence", "incomplete"], ["cut the grass", "incomplete"]]
+      task3 = (Todo.new("cut the grass")) 
+    #is this correct, should we add on one line then mark done on a seperate line
+      task4 = (Todo.new("Do the dishes"))
+      mainTest.add(task3)
+      mainTest.add(task4)
+      task4.mark_done!
+      expect(mainTest.incomplete).to eq [["cut the grass", "incomplete"]]
     end
   end
+
+  
 
 
 
   context "#complete" do
     it "returns all complete tasks" do
       mainTest = TodoList.new
-      mainTest.add(Todo.new("Do the cleaning").task)  
-      mainTest.add(Todo.new("paint the fence").task)
-      mainTest.add(Todo.new("cut the grass").task) 
-      #is this correct, should we add on one line then mark done on a seperate line
-      mainTest.add(Todo.new("Do the dishes").mark_done!)
+      
+      task1 = (Todo.new("Do the cleaning"))  
+      task2 = (Todo.new("paint the fence"))
+      task3 = (Todo.new("cut the grass")) 
+    #is this correct, should we add on one line then mark done on a seperate line
+      task4 = (Todo.new("Do the dishes"))
+      mainTest.add(task1)
+      mainTest.add(task2)
+      mainTest.add(task3)
+      mainTest.add(task4)
+      task4.mark_done!
       expect(mainTest.complete).to eq [["Do the dishes", "complete"]]
     end
   end
+
+
+
+
+
+
+
+
+
+
 end
       
 
