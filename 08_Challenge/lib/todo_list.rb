@@ -10,7 +10,7 @@ class TodoList
   end
 
   def incomplete
-    # Returns all non-done todos
+   return @main_list
   end
 
   def complete
@@ -21,3 +21,10 @@ class TodoList
     # Marks all todos as complete
   end
 end
+
+
+
+  [["Do the cleaning", "incomplete"], 
+  ["paint the fence", "incomplete"], 
+  ["cut the grass", "incomplete"], 
+  ["Do the dishes", "complete"]]

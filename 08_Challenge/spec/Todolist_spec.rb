@@ -1,30 +1,12 @@
-# require 'todo_list'
-# require 'todo'
+require 'todo_list'
 
-
-# # add (is an instance of Todo)
-#   # Returns nothing
-
-
-#   RSpec.describe "#add method" do
-#     it "taskes an instance of todo and adds the todo item & staus to the main list" do
-#       to_do_list = TodoList.new
-
-# end
-
-
-
-
-
-
-
-# incomplete
- # Returns all non-done todos
-
- # complete
-  # Returns all complete todos
-
-# give_up!
-  #Marks all todos as complete
-
-
+ describe "#incomplete method" do
+    it "" do
+      mainTest = TodoList.new
+      mainTest.add(Todo.new("Do the cleaning").task)
+      result = mainTest.add(Todo.new("Do the dishes").task)
+      
+    
+      expect(result).to eq [["Do the cleaning", "incomplete"], ["Do the dishes", "incomplete"]]
+  end
+end

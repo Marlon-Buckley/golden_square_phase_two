@@ -8,7 +8,8 @@ class Todo
   end
 
   def mark_done!
-    return @task[1] = "complete"
+    @task[1] = "complete"
+    return @task
   end
 
   def done?
