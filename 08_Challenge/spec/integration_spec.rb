@@ -18,11 +18,10 @@ RSpec.describe TodoList do
       mainTest = TodoList.new
       mainTest.add(Todo.new("Do the cleaning").task)  
       mainTest.add(Todo.new("paint the fence").task)
-      mainTest.add(Todo.new("cut the grass").task)
+      mainTest.add(Todo.new("cut the grass").task) 
+      #is this correct, should we add on one line then mark done on a seperate line
       mainTest.add(Todo.new("Do the dishes").mark_done!)
-      result = mainTest.incomplete
-
-      expect(result).to eq [["Do the cleaning", "incomplete"], ["paint the fence", "incomplete"], ["cut the grass", "incomplete"]]
+      expect(mainTest.incomplete).to eq [["Do the cleaning", "incomplete"], ["paint the fence", "incomplete"], ["cut the grass", "incomplete"]]
     end
   end
 end

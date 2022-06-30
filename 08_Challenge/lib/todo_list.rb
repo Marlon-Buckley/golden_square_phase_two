@@ -10,7 +10,13 @@ class TodoList
   end
 
   def incomplete
-   return @main_list
+    incomplete_tasks = []
+    @main_list.each do | task, status | 
+      if status == "incomplete" 
+        incomplete_tasks << [task, status]
+      end
+    end
+    return incomplete_tasks
   end
 
   def complete
