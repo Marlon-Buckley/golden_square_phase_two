@@ -24,8 +24,4 @@ RSpec.describe "#task method" do
   end
 
 end
-# done? 
-  # Returns true if the task is done
-  # Otherwise, false
-
 

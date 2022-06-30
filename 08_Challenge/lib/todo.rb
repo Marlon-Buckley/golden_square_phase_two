@@ -1,8 +1,6 @@
 class Todo
   def initialize(task) # task is a string
     @task = [task, "incomplete"]
-
-    #example task = ["Do the the dished" "status/complete/incomplete"]
   end
 
   def task
