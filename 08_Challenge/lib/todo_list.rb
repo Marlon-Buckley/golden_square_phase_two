@@ -20,7 +20,13 @@ class TodoList
   end
 
   def complete
-    # Returns all complete todos
+    complete_tasks = []
+    @main_list.each do | task, status | 
+      if status == "complete" 
+        complete_tasks << [task, status]
+      end
+    end
+    return complete_tasks                  # Returns all complete todos
   end
 
   def give_up!
