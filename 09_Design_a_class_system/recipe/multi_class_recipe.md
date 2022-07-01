@@ -29,7 +29,7 @@
 
 class Diary
 
-  - add(entry)
+  - add(contents)
   - all
   - sort_by_time_to_read(time)
     => Some entry or entries that can be read within time?
@@ -37,11 +37,37 @@ class Diary
 
 class DiaryEntry(title, contents)
 
-  - initilize 
+  - initialize 
     @title
     @contents
     @mobile_number
     @total_words
+
+class TodoList
+
+  #initialize 
+    @todo_list 
+  #add 
+    -adds new todo object to @todo_list
+
+  #return_list
+    -returns entire todo list
+
+class Todo
+
+  #initialize
+    @task_name
+    @task_status
+
+  #name
+    - returns task name
+
+  #status 
+    -returns task status
+
+  #mark_done!
+    -marks task as done
+
 
 
 
